@@ -18,20 +18,10 @@ This project requires react >= 18
     - [Getting Started](#getting-started)
     - [Installation](#installation)
     - [Usage](#usage)
-        - [Serving the app](#serving-the-app)
-        - [Running the tests](#running-the-tests)
-        - [Building a distribution version](#building-a-distribution-version)
-        - [Serving the distribution version](#serving-the-distribution-version)
-    - [API](#api)
-        - [useBasicFetch](#usebasicfetch)
-            - [Options](#options)
-        - [fetchData](#fetchdata)
-    - [Contributing](#contributing)
-    - [Credits](#credits)
-    - [Built With](#built-with)
-    - [Versioning](#versioning)
-    - [Authors](#authors)
-    - [License](#license)
+    - [Options](#options)
+      - [shouldCloseOnOverlayClick](#shouldCloseOnOverlayClick)
+  - [Authors](#authors)
+  - [License](#license)
 
 ## Getting Started
 
@@ -87,7 +77,7 @@ const MyComponent = () => {
 
 #### Options
 
-`shouldCloseOnOverlayClick`
+[shouldCloseOnOverlayClick](#shouldCloseOnOverlayClick)
 
 | Type    | Default value |
 |---------|---------------|
@@ -125,7 +115,7 @@ const MyComponent = () => {
 
 ## Authors
 
-* **Dubar Jérémy** - *Initial work* - [JohnDoe](https://github.com/JohnDoe)
+* **Dubar Jérémy** 
 
 ## License
 [MIT License](https://andreasonny.mit-license.org/2019) © Andrea SonnY
