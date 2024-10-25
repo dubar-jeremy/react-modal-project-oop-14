@@ -1,7 +1,8 @@
 {
   "name": "react-modal-oop-project",
   "description": "A customizable and ready-to-use modal component for React TypeScript projects, developed as part of an OpenClassrooms project. Supports flexible styling and close controls.",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "author": "Dubar Jérémy",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
