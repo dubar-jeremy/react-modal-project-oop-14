@@ -88,3 +88,29 @@
 .custom-button-container {
     align-self: flex-end;
 }
+
+
+.react-modal-oop-title-container.has-title {
+    justify-content: space-between;
+}
+
+.react-modal-oop-title-container.no-title {
+    justify-content: flex-end;
+}
+
+.react-modal-oop-title-container {
+    display: flex;
+    align-items: center; /* Aligns title and close button vertically */
+    justify-content: space-between;
+}
+
+.react-modal-oop-title {
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes any default padding */
+    flex-grow: 1; /* Allows title to take up available space */
+}
+
+.react-modal-oop-close-btn {
+    margin: 0; /* Removes any default margin for alignment */
+    align-self: center; /* Aligns the button with the title */
+}

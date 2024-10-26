@@ -1,16 +1,13 @@
 import './index.css';
-import {
-  PropsWithChildren,
-  useCallback,
-  useEffect,
-  useRef,
-} from 'react';
+import { PropsWithChildren, useCallback, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { ReactModalProps } from './ReactModal.props';
 
 const ReactModal = ({
   open,
   onClose,
+  title,
+  content,
   options = {},
   style = {},
   children,
@@ -139,18 +136,21 @@ const ReactModal = ({
             {customCloseButton}
           </div>
         ) : (
-          <button
-            type="button"
-            className={`react-modal-oop-close-btn react-modal-oop-close-btn-size-${closeButtonSize} ${darkMode ? 'react-modal-oop-close-btn-dark' : 'react-modal-oop-close-btn-light'}`}
-            onClick={closeModal}
-          >
-            &times;
-          </button>
+            <div className={`react-modal-oop-title-container ${title ? 'has-title' : 'no-title'}`}>
+              {title && <h1 className="react-modal-oop-title">{title}</h1>}
+              <button
+                  type="button"
+                  className={`react-modal-oop-close-btn react-modal-oop-close-btn-size-${closeButtonSize} ${darkMode ? 'react-modal-oop-close-btn-dark' : 'react-modal-oop-close-btn-light'}`}
+                  onClick={closeModal}
+              >
+                &times;
+              </button>
+            </div>
         )}
-        <div>{children}</div>
+        <div>{content ?? children}</div>
       </div>
     </>,
-    document.body,
+      document.body,
   );
 };
 

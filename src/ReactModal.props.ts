@@ -3,6 +3,8 @@ import { ReactNode } from 'react';
 export interface ReactModalProps {
   open: boolean;
   onClose?: () => void;
+  title?: string | ReactNode;
+  content?: string | ReactNode;
   options?: {
     shouldCloseOnOverlayClick?: boolean;
     darkMode?: boolean;
