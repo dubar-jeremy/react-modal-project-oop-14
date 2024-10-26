@@ -1,4 +1,4 @@
-.modal-overlay {
+.react-modal-oop-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -8,14 +8,83 @@
     z-index: 999;
 }
 
-.modal {
+.react-modal-oop-modal {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 1em;
-    border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+}
+
+.react-modal-oop-rounded {
+    border-radius: 8px;
+}
+
+.react-modal-oop-close-btn {
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    margin-block-start: -0.5em;
+    margin-inline-end: -0.5em;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.react-modal-oop-close-btn-light {
+    color: black;
+}
+
+.react-modal-oop-close-btn-light:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+}
+
+.react-modal-oop-close-btn-light:active {
+    transform: scale(0.95);
+}
+
+/* Dark mode close button styles */
+.react-modal-oop-close-btn-dark {
+    color: white;
+}
+
+.react-modal-oop-close-btn-dark:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.react-modal-oop-close-btn-dark:active {
+    transform: scale(0.95);
+}
+
+.react-modal-oop-close-btn-size-s {
+    font-size: 0.75rem;
+}
+
+.react-modal-oop-close-btn-size-m {
+    font-size: 1rem;
+}
+
+.react-modal-oop-close-btn-size-l {
+    font-size: 1.25rem;
+}
+
+.react-modal-oop-close-btn-size-xl {
+    font-size: 1.5rem;
+}
+
+.react-modal-oop-close-btn-size-xxl {
+    font-size: 2rem;
+}
+
+.custom-button-container {
+    align-self: flex-end;
 }
