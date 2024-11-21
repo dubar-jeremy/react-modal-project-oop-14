@@ -13,13 +13,15 @@ This project requires react >= 18
 ## Table of contents
 
 - [React Modal](#react-modal-student-project)
-    - [Prerequisites](#prerequisites)
-    - [Table of contents](#table-of-contents)
-    - [Getting Started](#getting-started)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Options](#options)
-      - [shouldCloseOnOverlayClick](#shouldCloseOnOverlayClick)
+  - [Prerequisites](#prerequisites)
+  - [Table of contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Options](#options)
+    - [Options Overview](#options-overview)
+    - [Style Options](#style-options)
+    - [Functionality Options](#functionality-options)
   - [Authors](#authors)
   - [License](#license)
 
@@ -75,6 +77,7 @@ const MyComponent = () => {
 }
 ```
 
+
 #### Options
 
 [shouldCloseOnOverlayClick](#shouldCloseOnOverlayClick)
@@ -83,7 +86,14 @@ const MyComponent = () => {
 |---------|---------------|
 | boolean | false         |
 
-If present, the request will be performed as soon as the component is mounted
+
+[darkMode](#darkMode)
+
+| Type    | Default value |
+|---------|---------------|
+| boolean | false         |
+
+
 
 Example:
 
@@ -98,6 +108,7 @@ const MyComponent = () => {
             onClose={closeModal}
             options={{
                 shouldCloseOnOverlayClick: true,
+                darkMode: true,
             }}
         >
             <h1>Test</h1>
@@ -113,9 +124,47 @@ const MyComponent = () => {
 ```
 
 
+### Style Options
+
+| Option              | Type         | Default Value | Description                              |
+|---------------------|--------------|---------------|------------------------------------------|
+| `width`             | `string`     | `'50%'`       | Defines the modal's width.               |
+| `height`            | `string`     | `'auto'`      | Defines the modal's height.              |
+| `borderRounded`     | `boolean`    | `true`        | Toggles rounded borders.                 |
+| `backgroundColor`   | `string`     | `'white'`     | Sets the modal's background color.       |
+| `color`             | `string`     | `'black'`     | Sets the modal's text color.             |
+| `customCloseButton` | `ReactNode`  | `undefined`   | Allows a custom close button element.    |
+| `closeButtonSize`   | `s m l xl  ` | `undefined`   | Sets the close button size.              |
+
+
+```tsx
+const MyComponent = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const closeModal = () => setIsOpen(false);
+
+    return (
+        <ReactModal
+            open={isOpen}
+            onClose={closeModal}
+            style={{
+                color: 'red',
+            }}
+        >
+            <h1>Test</h1>
+            <p>
+                content hello Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit. A, adipisci animi dicta dolore dolorum eos fugit in labore nisi
+                nobis non numquam quaerat quam quod, repellendus soluta tempora
+                voluptate voluptatum!
+            </p>
+        </ReactModal>
+    )
+}
+```
+
 ## Authors
 
 * **Dubar Jérémy** 
 
 ## License
-[MIT License](https://andreasonny.mit-license.org/2019) © Andrea SonnY
+[MIT License](https://andreasonny.mit-license.org/2019) © Dubar Jérémy
